@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { formatKey, formatValue } from '../../utils/countryFormatter';
 
-function CountriesCardInfo(props) {
+const CountriesCardInfo = (props) => {
   const { info, className } = props;
   const keys = Object.keys(info);
   const entries = keys.map((key) => ({
@@ -19,7 +19,7 @@ function CountriesCardInfo(props) {
       ))}
     </ul>
   );
-}
+};
 
 CountriesCardInfo.propTypes = {
   info: PropTypes.objectOf(

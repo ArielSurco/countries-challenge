@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import CountriesCard from './components/countries/CountriesCard';
 
-function App() {
+const App = () => {
   const [country, setCountry] = useState(null);
   useEffect(() => {
     (async () => {
@@ -13,6 +13,6 @@ function App() {
     })();
   }, []);
   return country && <CountriesCard country={country} />;
-}
+};
 
 export default App;

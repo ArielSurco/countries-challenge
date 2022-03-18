@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import CountriesCardInfo from './CountriesCardInfo';
 // import { formatValue } from '../../utils/countryFormatter';
 
-function CountriesCard(props) {
+const CountriesCard = (props) => {
   const { className, country } = props;
   const {
     name,
@@ -37,7 +37,7 @@ function CountriesCard(props) {
       <CountriesCardInfo info={extraInfo} />
     </div>
   );
-}
+};
 
 CountriesCard.propTypes = {
   className: PropTypes.string,
