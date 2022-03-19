@@ -41,12 +41,14 @@ const CountriesCard = (props) => {
     borderCountries && (
       <div className={`countries-card ${className}`}>
         <img src={flag} alt={`${name} flag`} />
-        <h1>{name}</h1>
-        <CountriesCardInfo info={mainInfo} />
-        <CountriesCardInfo info={extraInfo} />
         <div>
-          <span>Border Countries</span>
-          {borderCountries}
+          <h1>{name}</h1>
+          <CountriesCardInfo info={mainInfo} />
+          <CountriesCardInfo info={extraInfo} />
+          <div>
+            <span>Border Countries</span>
+            {borderCountries}
+          </div>
         </div>
       </div>
     )

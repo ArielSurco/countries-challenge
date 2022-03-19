@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'PrimaSans';
+  src: url("/src/assets/fonts/prima-sans-bold.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "PrimaSans", sans-serif, Arial, Helvetica;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.theme--light {
+  --main-bg-color: $primary-bg-color;
+  --secondary-bg-color: $secondary-bg-color;
+  --main-text-color: $main-text-color;
+  --main-shadow-color: $main-shadow-color;
+}
+
+.theme--dark {
+  --main-bg-color: $primary-bg-color--dark;
+  --secondary-bg-color: $secondary-bg-color--dark;
+  --main-text-color: $main-text-color--dark;
+  --main-shadow-color: $main-shadow-color--dark;
+}
+/*# sourceMappingURL=index.css.map */
