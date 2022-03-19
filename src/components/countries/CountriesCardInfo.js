@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { formatKey, formatValue } from '../../utils/countryFormatter';
+import { formatKey, formatValue } from '../../utils/countries';
 
 const CountriesCardInfo = (props) => {
   const { info, className } = props;

@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import CountriesCardInfo from './CountriesCardInfo';
-// import { formatValue } from '../../utils/countryFormatter';
+import { showBorderCountries } from '../../utils/countries';
 
 const CountriesCard = (props) => {
   const { className, country } = props;
+  const [borderCountries, setBorderCountries] = useState([]);
   const {
     name,
     flag,
@@ -15,7 +16,8 @@ const CountriesCard = (props) => {
     capital,
     topLevelDomain,
     currencies,
-    languages
+    languages,
+    borders
   } = country;
   const mainInfo = {
     nativeName,
@@ -29,26 +31,38 @@ const CountriesCard = (props) => {
     currencies,
     languages
   };
+  useEffect(() => {
+    (async () => {
+      setBorderCountries(await showBorderCountries(borders));
+    })();
+  }, [borders]);
+
   return (
-    <div className={`countries-card ${className}`}>
-      <img src={flag} alt={`${name} flag`} />
-      <h1>{name}</h1>
-      <CountriesCardInfo info={mainInfo} />
-      <CountriesCardInfo info={extraInfo} />
-    </div>
+    borderCountries && (
+      <div className={`countries-card ${className}`}>
+        <img src={flag} alt={`${name} flag`} />
+        <h1>{name}</h1>
+        <CountriesCardInfo info={mainInfo} />
+        <CountriesCardInfo info={extraInfo} />
+        <div>
+          <span>Border Countries</span>
+          {borderCountries}
+        </div>
+      </div>
+    )
   );
 };
 
 CountriesCard.propTypes = {
   className: PropTypes.string,
   country: PropTypes.shape({
-    name: PropTypes.string.isRequired,
-    flag: PropTypes.string.isRequired,
-    nativeName: PropTypes.string.isRequired,
-    population: PropTypes.number.isRequired,
-    region: PropTypes.string.isRequired,
-    subregion: PropTypes.string.isRequired,
-    capital: PropTypes.string.isRequired,
+    name: PropTypes.string,
+    flag: PropTypes.string,
+    nativeName: PropTypes.string,
+    population: PropTypes.number,
+    region: PropTypes.string,
+    subregion: PropTypes.string,
+    capital: PropTypes.string,
     topLevelDomain: PropTypes.arrayOf(PropTypes.string),
     currencies: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
     languages: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),

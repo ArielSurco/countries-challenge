@@ -1,13 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const MainButton = (props) => {
   const { children, className, ...rest } = props;
   return (
-    <Link className={`btn ${className}`} {...rest}>
+    <a className={`btn ${className}`} {...rest}>
       {children}
-    </Link>
+    </a>
   );
+};
+
+MainButton.propTypes = {
+  className: PropTypes.string,
+  children: PropTypes.node.isRequired
+};
+
+MainButton.defaultProps = {
+  className: ''
 };
 
 export default MainButton;
