@@ -65,10 +65,10 @@ body {
 }
 
 .btn:active {
-  -webkit-transform: scale(0.97);
-          transform: scale(0.97);
-  -webkit-transition: all ease 0.25s;
-  transition: all ease 0.25s;
+  -webkit-transform: scale(0.95);
+          transform: scale(0.95);
+  -webkit-transition: all ease 0.15s;
+  transition: all ease 0.15s;
 }
 
 @font-face {
