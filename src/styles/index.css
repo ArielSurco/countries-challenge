@@ -117,6 +117,7 @@ body {
 }
 
 .country-card.preview {
+  cursor: pointer;
   background-color: var(--secondary-bg-color);
 }
 

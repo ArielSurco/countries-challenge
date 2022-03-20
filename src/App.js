@@ -13,7 +13,7 @@ const App = () => {
     })();
   }, []);
   return (
-    <div>{country && <CountriesCard country={country} mode="detail" />}</div>
+    <div>{country && <CountriesCard country={country} mode="preview" />}</div>
   );
 };
 

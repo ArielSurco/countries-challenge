@@ -12,6 +12,7 @@
   row-gap: 20px;
   text-transform: capitalize;
   &.preview {
+    cursor: pointer;
     background-color: var(--secondary-bg-color);
     .content {
       padding: 0 5% 30px 5%;
