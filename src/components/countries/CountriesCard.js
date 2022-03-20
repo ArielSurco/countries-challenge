@@ -45,9 +45,18 @@ const CountriesCard = (props) => {
           <h1>{name}</h1>
           <CountriesCardInfo info={mainInfo} />
           <CountriesCardInfo info={extraInfo} />
-          <div>
+          <div style={{ display: 'flex', flexDirection: 'column' }}>
             <span>Border Countries</span>
-            {borderCountries}
+            <div
+              style={{
+                display: 'flex',
+                flexWrap: 'wrap',
+                rowGap: '7px',
+                columnGap: '7px'
+              }}
+            >
+              {borderCountries}
+            </div>
           </div>
         </div>
       </div>

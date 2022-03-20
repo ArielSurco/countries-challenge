@@ -12,7 +12,7 @@ const App = () => {
       setCountry(res.data[0]);
     })();
   }, []);
-  return country && <CountriesCard country={country} />;
+  return <div>{country && <CountriesCard country={country} />}</div>;
 };
 
 export default App;

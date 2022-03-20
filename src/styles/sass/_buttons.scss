@@ -1,0 +1,24 @@
+@import './global';
+
+@mixin btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 24px;
+  min-width: 90px;
+  color: var(--main-text-color);
+  border-radius: 2.5px;
+  font-size: 1.3rem;
+  font-weight: 300;
+  background-color: var(--secondary-bg-color);
+}
+
+.btn {
+  @include btn();
+  &.md {
+    min-width: 100px;
+    min-height: 30px;
+    padding: 0 10px;
+    font-size: 1.6rem;
+  }
+}
