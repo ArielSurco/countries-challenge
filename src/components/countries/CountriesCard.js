@@ -20,21 +20,14 @@ const CountriesCard = (props) => {
         <img src={flag} alt={`${name} flag`} />
         <div className="content">
           <h1 className="title">{name}</h1>
-          <CountriesCardInfo info={mainInfo} />
-          {extraInfo && <CountriesCardInfo info={extraInfo} />}
+          <div className="info-container">
+            <CountriesCardInfo info={mainInfo} />
+            {extraInfo && <CountriesCardInfo info={extraInfo} />}
+          </div>
           {extraInfo && (
             <div className="border-countries">
               <span>Border Countries</span>
-              <div
-                style={{
-                  display: 'flex',
-                  flexWrap: 'wrap',
-                  rowGap: '7px',
-                  columnGap: '7px'
-                }}
-              >
-                {borderCountries}
-              </div>
+              <div className="btn-list">{borderCountries}</div>
             </div>
           )}
         </div>
