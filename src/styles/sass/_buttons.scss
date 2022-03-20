@@ -11,6 +11,7 @@
   font-weight: 300;
   background-color: var(--secondary-bg-color);
   box-shadow: $primary-box-shadow;
+  cursor: pointer;
 }
 
 .btn {
@@ -20,5 +21,9 @@
     min-height: 30px;
     padding: 0 10px;
     font-size: 1.6rem;
+  }
+  &:active {
+    transform: scale(0.97);
+    transition: all ease 0.25s;
   }
 }
