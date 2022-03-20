@@ -7,8 +7,13 @@
 
 .country-card {
   @include verticalAlignment();
-  padding: 0 5%;
   text-transform: capitalize;
+  &.preview {
+    background-color: var(--secondary-bg-color);
+    .content {
+      padding: 0 5% 30px 5%;
+    }
+  }
   img {
     max-width: 100%;
     margin-bottom: 20px;

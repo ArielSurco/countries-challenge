@@ -1,36 +1,13 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import CountriesCardInfo from './CountriesCardInfo';
-import { showBorderCountries } from '../../utils/countries';
+import { getInfo, showBorderCountries } from '../../utils/countries';
 
 const CountriesCard = (props) => {
-  const { className, country } = props;
+  const { className, country, mode } = props;
   const [borderCountries, setBorderCountries] = useState([]);
-  const {
-    name,
-    flag,
-    nativeName,
-    population,
-    region,
-    subregion,
-    capital,
-    topLevelDomain,
-    currencies,
-    languages,
-    borders
-  } = country;
-  const mainInfo = {
-    nativeName,
-    population,
-    region,
-    subregion,
-    capital
-  };
-  const extraInfo = {
-    topLevelDomain,
-    currencies,
-    languages
-  };
+  const { name, flag, borders } = country;
+  const { mainInfo, extraInfo } = getInfo(country, mode);
   useEffect(() => {
     (async () => {
       setBorderCountries(await showBorderCountries(borders));
@@ -39,25 +16,27 @@ const CountriesCard = (props) => {
 
   return (
     borderCountries && (
-      <div className={`country-card ${className}`}>
+      <div className={`country-card ${mode} ${className}`}>
         <img src={flag} alt={`${name} flag`} />
         <div className="content">
           <h1 className="title">{name}</h1>
           <CountriesCardInfo info={mainInfo} />
-          <CountriesCardInfo info={extraInfo} />
-          <div className="border-countries">
-            <span>Border Countries</span>
-            <div
-              style={{
-                display: 'flex',
-                flexWrap: 'wrap',
-                rowGap: '7px',
-                columnGap: '7px'
-              }}
-            >
-              {borderCountries}
+          {extraInfo && <CountriesCardInfo info={extraInfo} />}
+          {extraInfo && (
+            <div className="border-countries">
+              <span>Border Countries</span>
+              <div
+                style={{
+                  display: 'flex',
+                  flexWrap: 'wrap',
+                  rowGap: '7px',
+                  columnGap: '7px'
+                }}
+              >
+                {borderCountries}
+              </div>
             </div>
-          </div>
+          )}
         </div>
       </div>
     )
@@ -78,7 +57,8 @@ CountriesCard.propTypes = {
     currencies: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
     languages: PropTypes.arrayOf(PropTypes.objectOf(PropTypes.string)),
     borders: PropTypes.arrayOf(PropTypes.string)
-  }).isRequired
+  }).isRequired,
+  mode: PropTypes.string.isRequired
 };
 
 CountriesCard.defaultProps = {

@@ -12,7 +12,9 @@ const App = () => {
       setCountry(res.data[0]);
     })();
   }, []);
-  return <div>{country && <CountriesCard country={country} />}</div>;
+  return (
+    <div>{country && <CountriesCard country={country} mode="preview" />}</div>
+  );
 };
 
 export default App;

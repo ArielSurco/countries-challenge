@@ -17,6 +17,46 @@ export const formatValue = (key, value) => {
   }
 };
 
+export const getInfo = (country, mode) => {
+  const {
+    nativeName,
+    population,
+    region,
+    subregion,
+    capital,
+    topLevelDomain,
+    currencies,
+    languages
+  } = country;
+  let mainInfo;
+  let extraInfo;
+  if (mode === 'preview') {
+    mainInfo = {
+      population,
+      region,
+      capital
+    };
+  }
+  if (mode === 'detail') {
+    mainInfo = {
+      nativeName,
+      population,
+      region,
+      subregion,
+      capital
+    };
+    extraInfo = {
+      topLevelDomain,
+      currencies,
+      languages
+    };
+  }
+  return {
+    mainInfo,
+    extraInfo
+  };
+};
+
 export const showBorderCountries = async (borders) => {
   const res = await axios.get('https://restcountries.com/v2/all');
   const allCountries = res.data;

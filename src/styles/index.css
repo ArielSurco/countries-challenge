@@ -115,8 +115,15 @@ body {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 0 5%;
   text-transform: capitalize;
+}
+
+.country-card.preview {
+  background-color: var(--secondary-bg-color);
+}
+
+.country-card.preview .content {
+  padding: 0 5% 30px 5%;
 }
 
 .country-card img {
