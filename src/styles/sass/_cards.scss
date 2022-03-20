@@ -1,0 +1,49 @@
+@import './global';
+
+@mixin verticalAlignment {
+  display: flex;
+  flex-direction: column;
+}
+
+.country-card {
+  @include verticalAlignment();
+  width: 90%;
+  margin: 0 auto;
+  text-transform: capitalize;
+  img {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .content {
+    @include verticalAlignment();
+    row-gap: 20px;
+    .title {
+      font-family: $secondary-font;
+      font-size: 2rem;
+    }
+    .item {
+      margin-bottom: 12px;
+      font-weight: 300;
+    }
+    .key {
+      font-weight: 400;
+    }
+    .info {
+      list-style: none;
+      font-size: 1.3rem;
+    }
+    .border-countries {
+      @include verticalAlignment();
+      row-gap: 15px;
+      span {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (min-width: 785px) {
+  .card {
+    flex-direction: row;
+  }
+}

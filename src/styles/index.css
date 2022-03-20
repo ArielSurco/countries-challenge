@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @font-face {
   font-family: 'PrimaSans';
   src: url("/src/assets/fonts/prima-sans-bold.otf") format("opentype");
@@ -16,7 +17,7 @@ html {
   font-size: 62.5%;
 }
 
-body {
+:root {
   --main-bg-color: #fafafa;
   --secondary-bg-color: #ffffff;
   --main-text-color: #131416;
@@ -28,6 +29,11 @@ body[data-theme='dark'] {
   --secondary-bg-color: #2b3743;
   --main-text-color: #ffffff;
   --main-shadow-color: #000000;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
 }
 
 .btn {
@@ -42,7 +48,6 @@ body[data-theme='dark'] {
           justify-content: center;
   min-height: 24px;
   min-width: 90px;
-  color: var(--main-text-color);
   border-radius: 2.5px;
   font-size: 1.3rem;
   font-weight: 300;
@@ -54,5 +59,113 @@ body[data-theme='dark'] {
   min-height: 30px;
   padding: 0 10px;
   font-size: 1.6rem;
+}
+
+@font-face {
+  font-family: 'PrimaSans';
+  src: url("/src/assets/fonts/prima-sans-bold.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --main-bg-color: #fafafa;
+  --secondary-bg-color: #ffffff;
+  --main-text-color: #131416;
+  --main-shadow-color: #868686;
+}
+
+body[data-theme='dark'] {
+  --main-bg-color: #202d36;
+  --secondary-bg-color: #2b3743;
+  --main-text-color: #ffffff;
+  --main-shadow-color: #000000;
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+.country-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 90%;
+  margin: 0 auto;
+  text-transform: capitalize;
+}
+
+.country-card img {
+  max-width: 100%;
+  margin-bottom: 20px;
+}
+
+.country-card .content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 20px;
+}
+
+.country-card .content .title {
+  font-family: "PrimaSans";
+  font-size: 2rem;
+}
+
+.country-card .content .item {
+  margin-bottom: 12px;
+  font-weight: 300;
+}
+
+.country-card .content .key {
+  font-weight: 400;
+}
+
+.country-card .content .info {
+  list-style: none;
+  font-size: 1.3rem;
+}
+
+.country-card .content .border-countries {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  row-gap: 15px;
+}
+
+.country-card .content .border-countries span {
+  font-size: 1.5rem;
+}
+
+@media (min-width: 785px) {
+  .card {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
 }
 /*# sourceMappingURL=index.css.map */

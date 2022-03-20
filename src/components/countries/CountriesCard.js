@@ -39,13 +39,13 @@ const CountriesCard = (props) => {
 
   return (
     borderCountries && (
-      <div className={`countries-card ${className}`}>
+      <div className={`country-card ${className}`}>
         <img src={flag} alt={`${name} flag`} />
-        <div>
-          <h1>{name}</h1>
+        <div className="content">
+          <h1 className="title">{name}</h1>
           <CountriesCardInfo info={mainInfo} />
           <CountriesCardInfo info={extraInfo} />
-          <div style={{ display: 'flex', flexDirection: 'column' }}>
+          <div className="border-countries">
             <span>Border Countries</span>
             <div
               style={{
