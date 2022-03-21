@@ -8,6 +8,9 @@
   align-items: center;
   box-shadow: $secondary-box-shadow;
   background-color: var(--secondary-bg-color);
+  .title {
+    font-family: 'PrimaSans';
+  }
   .switch {
     display: flex;
     width: max-content;

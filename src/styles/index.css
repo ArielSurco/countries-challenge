@@ -56,6 +56,10 @@ body {
   background-color: var(--secondary-bg-color);
 }
 
+.header .title {
+  font-family: 'PrimaSans';
+}
+
 .header .switch {
   display: -webkit-box;
   display: -ms-flexbox;

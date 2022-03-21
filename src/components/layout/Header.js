@@ -11,7 +11,7 @@ const Header = () => {
   }, [darkTheme]);
   return (
     <header className="header">
-      <a href="/">Where in the world?</a>
+      <h1 className="title">Where in the world?</h1>
       <button className="switch" type="button" onClick={toggleDarkTheme}>
         <i className="dark-mode-icon" /> Dark Mode
       </button>
