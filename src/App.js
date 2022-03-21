@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 import CountriesCard from './components/countries/CountriesCard';
+import Layout from './components/layout/Layout';
 
 const App = () => {
   const [country, setCountry] = useState(null);
@@ -13,7 +14,9 @@ const App = () => {
     })();
   }, []);
   return (
-    <div>{country && <CountriesCard country={country} mode="preview" />}</div>
+    <Layout>
+      {country && <CountriesCard country={country} mode="preview" />}
+    </Layout>
   );
 };
 
