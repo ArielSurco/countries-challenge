@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @font-face {
   font-family: 'PrimaSans';
   src: url("/src/assets/fonts/prima-sans-bold.otf") format("opentype");
@@ -210,12 +211,29 @@ body {
 }
 
 .country-card.preview {
+  width: 250px;
+  margin: 0;
   cursor: pointer;
   background-color: var(--secondary-bg-color);
 }
 
+.country-card.preview img {
+  height: 150px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 .country-card.preview .content {
-  padding: 0 5% 30px 5%;
+  padding: 0 5% 20px 5%;
+  row-gap: 10px;
+}
+
+.country-card.preview .content .title {
+  display: -webkit-box;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
 }
 
 .country-card img {
@@ -310,5 +328,56 @@ body {
         -ms-flex-pack: center;
             justify-content: center;
   }
+}
+
+@font-face {
+  font-family: 'PrimaSans';
+  src: url("/src/assets/fonts/prima-sans-bold.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --main-bg-color: #fafafa;
+  --secondary-bg-color: #ffffff;
+  --main-text-color: #131416;
+  --main-shadow-color: #868686;
+  --dark-mode-icon: url("../assets/icons/dark_mode_black_24dp.svg");
+}
+
+body[data-theme='dark'] {
+  --main-bg-color: #202d36;
+  --secondary-bg-color: #2b3743;
+  --main-text-color: #ffffff;
+  --main-shadow-color: #000000;
+  --dark-mode-icon: url("../assets/icons/dark_mode_white_24dp.svg");
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+.countries-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  gap: 50px;
 }
 /*# sourceMappingURL=index.css.map */

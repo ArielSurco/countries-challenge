@@ -12,10 +12,24 @@
   row-gap: 20px;
   text-transform: capitalize;
   &.preview {
+    width: 250px;
+    margin: 0;
     cursor: pointer;
     background-color: var(--secondary-bg-color);
+    img {
+      height: 150px;
+      object-fit: cover;
+    }
     .content {
-      padding: 0 5% 30px 5%;
+      .title {
+        display: -webkit-box;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        -webkit-line-clamp: 1;
+        -webkit-box-orient: vertical;
+      }
+      padding: 0 5% 20px 5%;
+      row-gap: 10px;
     }
   }
   img {
