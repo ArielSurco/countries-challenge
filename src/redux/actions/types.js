@@ -1,0 +1,7 @@
+export const GET_ALL_COUNTRIES = 'GET_ALL_COUNTRIES';
+export const GET_COUNTRIES_BY_REGION = 'GET_COUNTRIES_BY_REGION';
+export const GET_COUNTRY = 'GET_COUNTRY';
+export const SET_COUNTRIES = 'SET_COUNTRIES';
+export const SET_COUNTRY = 'SET_COUNTRY';
+export const SET_LOADING = 'SET_LOADING';
+export const SET_ERROR = 'SET_ERROR';
