@@ -1,29 +1,18 @@
-import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import CountriesCard from './components/countries/CountriesCard';
 import Layout from './components/layout/Layout';
-import { getAllCountries } from './redux/actions/actions';
+import { getCountryByName } from './redux/actions/actions';
 
 const App = () => {
-  const store = useSelector((state) => state);
+  const country = useSelector((state) => state.country);
   const dispatch = useDispatch();
-  const [country, setCountry] = useState(null);
   useEffect(() => {
-    console.log(store);
-  }, [store]);
-  useEffect(() => {
-    dispatch(getAllCountries());
-    (async () => {
-      const res = await axios.get(
-        'https://restcountries.com/v2/name/Argentina'
-      );
-      setCountry(res.data[0]);
-    })();
+    dispatch(getCountryByName('Argentina'));
   }, []);
   return (
     <Layout>
-      {country && <CountriesCard country={country} mode="preview" />}
+      {country?.name && <CountriesCard country={country} mode="detail" />}
     </Layout>
   );
 };

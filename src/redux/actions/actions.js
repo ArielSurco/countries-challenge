@@ -40,6 +40,6 @@ export const getCountriesByRegion = (region) => (dispatch) => {
 export const getCountryByName = (name) => (dispatch) => {
   dispatch(setLoading());
   return getByName(name)
-    .then((country) => dispatch(setCountry(country)))
+    .then((country) => dispatch(setCountry(country[0])))
     .catch(() => dispatch(setError()));
 };
