@@ -1,4 +1,8 @@
-import { getAll, getByRegion } from '../../services/countriesService';
+import {
+  getAll,
+  getByName,
+  getByRegion
+} from '../../services/countriesService';
 import * as actionTypes from './types';
 
 export const setError = () => ({
@@ -30,5 +34,12 @@ export const getCountriesByRegion = (region) => (dispatch) => {
   dispatch(setLoading());
   return getByRegion(region)
     .then((countries) => dispatch(setCountries(countries)))
+    .catch(() => dispatch(setError()));
+};
+
+export const getCountryByName = (name) => (dispatch) => {
+  dispatch(setLoading());
+  return getByName(name)
+    .then((country) => dispatch(setCountry(country)))
     .catch(() => dispatch(setError()));
 };
