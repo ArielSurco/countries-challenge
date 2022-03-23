@@ -1,20 +1,16 @@
-import React, { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
-import CountriesCard from './components/countries/CountriesCard';
+import React from 'react';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './components/layout/Layout';
-import { getCountryByName } from './redux/actions/actions';
+import Home from './pages/Home';
 
-const App = () => {
-  const country = useSelector((state) => state.country);
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(getCountryByName('Argentina'));
-  }, []);
-  return (
+const App = () => (
+  <BrowserRouter>
     <Layout>
-      {country?.name && <CountriesCard country={country} mode="detail" />}
+      <Routes>
+        <Route exact path="/" element={<Home />} />
+      </Routes>
     </Layout>
-  );
-};
+  </BrowserRouter>
+);
 
 export default App;
