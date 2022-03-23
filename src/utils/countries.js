@@ -67,6 +67,8 @@ export const showBorderCountries = async (borders) => {
     (country) => country.nativeName
   );
   return borderCountries.map((name) => (
-    <MainButton key={name}>{name}</MainButton>
+    <MainButton key={name} to={`/countries/detail/${name}`}>
+      {name}
+    </MainButton>
   ));
 };

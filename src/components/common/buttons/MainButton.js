@@ -1,12 +1,14 @@
+/* eslint-disable react/jsx-props-no-spreading */
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 const MainButton = (props) => {
   const { children, className, ...rest } = props;
   return (
-    <a className={`btn ${className}`} {...rest}>
+    <Link className={`btn ${className}`} {...rest}>
       {children}
-    </a>
+    </Link>
   );
 };
 

@@ -10,12 +10,16 @@
   max-width: 750px;
   margin: 0 auto;
   row-gap: 20px;
+  color: var(--main-text-color);
+  text-decoration: none;
   text-transform: capitalize;
+  cursor: default;
   &.preview {
     width: 250px;
     margin: 0;
-    cursor: pointer;
+    box-shadow: $secondary-box-shadow;
     background-color: var(--secondary-bg-color);
+    cursor: pointer;
     img {
       height: 150px;
       object-fit: cover;

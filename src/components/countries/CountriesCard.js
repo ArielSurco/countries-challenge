@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 import CountriesCardInfo from './CountriesCardInfo';
 import { getInfo, showBorderCountries } from '../../utils/countries';
 
@@ -16,7 +17,10 @@ const CountriesCard = (props) => {
 
   return (
     borderCountries && (
-      <div className={`country-card ${mode} ${className}`}>
+      <Link
+        to={mode === 'preview' && `/countries/detail/${name}`}
+        className={`country-card ${mode} ${className}`}
+      >
         <img src={flag} alt={`${name} flag`} />
         <div className="content">
           <h1 className="title">{name}</h1>
@@ -31,7 +35,7 @@ const CountriesCard = (props) => {
             </div>
           )}
         </div>
-      </div>
+      </Link>
     )
   );
 };
