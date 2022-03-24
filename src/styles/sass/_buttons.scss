@@ -19,6 +19,9 @@
 .btn {
   @include btn();
   &.md {
+    &:active {
+      transform: none;
+    }
     min-width: 100px;
     min-height: 30px;
     padding: 0 10px;

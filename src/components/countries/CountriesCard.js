@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 import CountriesCardInfo from './CountriesCardInfo';
 import { getInfo, showBorderCountries } from '../../utils/countries';
 
@@ -9,11 +10,10 @@ const CountriesCard = (props) => {
   const [borderCountries, setBorderCountries] = useState([]);
   const { name, flag, borders } = country;
   const { mainInfo, extraInfo } = getInfo(country, mode);
+  const allCountries = useSelector((store) => store.countries);
   useEffect(() => {
-    (async () => {
-      setBorderCountries(await showBorderCountries(borders));
-    })();
-  }, [borders]);
+    setBorderCountries(showBorderCountries(allCountries, borders));
+  }, [borders, allCountries]);
 
   return (
     borderCountries && (

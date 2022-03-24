@@ -4,16 +4,17 @@ import { getAllCountries } from '../redux/actions/actions';
 import CountriesCard from '../components/countries/CountriesCard';
 
 const Home = () => {
-  const countries = useSelector((state) => state.countries);
+  const { countries } = useSelector((store) => store);
   const dispatch = useDispatch();
   useEffect(() => {
-    dispatch(getAllCountries('Argentina'));
+    dispatch(getAllCountries());
   }, []);
   return (
     <div className="countries-container">
-      {countries?.map((country) => (
-        <CountriesCard country={country} mode="preview" />
-      ))}
+      {countries.length > 0 &&
+        countries.map((country) => (
+          <CountriesCard key={country.name} country={country} mode="preview" />
+        ))}
     </div>
   );
 };
