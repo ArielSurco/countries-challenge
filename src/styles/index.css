@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
 @font-face {
   font-family: 'PrimaSans';
   src: url("/src/assets/fonts/prima-sans-bold.otf") format("opentype");
@@ -418,5 +419,51 @@ body {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   gap: 50px;
+}
+
+@font-face {
+  font-family: 'PrimaSans';
+  src: url("/src/assets/fonts/prima-sans-bold.otf") format("opentype");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Roboto";
+}
+
+html {
+  font-size: 62.5%;
+}
+
+:root {
+  --main-bg-color: #fafafa;
+  --secondary-bg-color: #ffffff;
+  --main-text-color: #131416;
+  --main-shadow-color: #868686;
+  --dark-mode-icon: url("../assets/icons/dark_mode_black_24dp.svg");
+  --left-arrow-icon: url("../assets/icons/west_black_24dp.svg");
+}
+
+body[data-theme='dark'] {
+  --main-bg-color: #202d36;
+  --secondary-bg-color: #2b3743;
+  --main-text-color: #ffffff;
+  --main-shadow-color: #000000;
+  --dark-mode-icon: url("../assets/icons/dark_mode_white_24dp.svg");
+  --left-arrow-icon: url("../assets/icons/west_white_24dp.svg");
+}
+
+body {
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+}
+
+.select {
+  width: 150px;
+  height: 50px;
+  border-radius: 5px;
 }
 /*# sourceMappingURL=index.css.map */
