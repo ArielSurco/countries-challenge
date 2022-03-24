@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useParams } from 'react-router-dom';
-import MainButton from '../components/common/buttons/MainButton';
+import MainButton from '../components/common/MainButton';
 import CountriesCard from '../components/countries/CountriesCard';
 import { getCountryByName } from '../redux/actions/actions';
 

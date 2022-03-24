@@ -1,5 +1,5 @@
 import React from 'react';
-import MainButton from '../components/common/buttons/MainButton';
+import MainButton from '../components/common/MainButton';
 
 export const formatKey = (key) => key.split(/(?=[A-Z])/).join(' ');
 
