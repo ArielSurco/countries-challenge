@@ -13,14 +13,14 @@ const CountryDetail = () => {
     dispatch(getCountryByName(countryName));
   }, [countryName]);
   return (
-    <>
-      <MainButton to="/" className="md">
-        Back
+    <div className="country-container">
+      <MainButton to="/" className="md btn-back">
+        <span className="left-arrow-icon" /> Back
       </MainButton>
       {country?.name === countryName && (
         <CountriesCard country={country} mode="detail" />
       )}
-    </>
+    </div>
   );
 };
 

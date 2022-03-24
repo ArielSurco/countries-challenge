@@ -24,9 +24,13 @@ $secondary-font: 'PrimaSans';
 $primary-box-shadow: 0px 0px 7px -3px rgba(0, 0, 0, 0.5);
 $secondary-box-shadow: 0px 0px 10px -2px rgba(0, 0, 0, 0.5);
 
-//Icons
-$dark-mode-icon-false: url('../assets/icons/dark_mode_black_24dp.svg');
-$dark-mode-icon-true: url('../assets/icons/dark_mode_white_24dp.svg');
+//Icons with dark mode
+$dark-mode-moon-icon: url('../assets/icons/dark_mode_white_24dp.svg');
+$dark-mode-left-arrow-icon: url('../assets/icons/west_white_24dp.svg');
+
+//Icons without dark mode
+$light-mode-moon-icon: url('../assets/icons/dark_mode_black_24dp.svg');
+$light-mode-left-arrow-icon: url('../assets/icons/west_black_24dp.svg');
 
 * {
   margin: 0;
@@ -44,7 +48,8 @@ html {
   --secondary-bg-color: #{$secondary-bg-color};
   --main-text-color: #{$main-text-color};
   --main-shadow-color: #{$main-shadow-color};
-  --dark-mode-icon: #{$dark-mode-icon-false};
+  --dark-mode-icon: #{$light-mode-moon-icon};
+  --left-arrow-icon: #{$light-mode-left-arrow-icon};
 }
 
 body[data-theme='dark'] {
@@ -52,7 +57,8 @@ body[data-theme='dark'] {
   --secondary-bg-color: #{$secondary-bg-color--dark};
   --main-text-color: #{$main-text-color--dark};
   --main-shadow-color: #{$main-shadow-color--dark};
-  --dark-mode-icon: #{$dark-mode-icon-true};
+  --dark-mode-icon: #{$dark-mode-moon-icon};
+  --left-arrow-icon: #{$dark-mode-left-arrow-icon};
 }
 
 body {

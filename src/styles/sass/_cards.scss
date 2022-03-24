@@ -36,6 +36,9 @@
       row-gap: 10px;
     }
   }
+  &.detail {
+    padding: 0 5%;
+  }
   img {
     width: 100%;
   }
@@ -91,6 +94,7 @@
 @media (min-width: 1024px) {
   .country-card.detail {
     max-width: 1000px;
+    padding: 0;
     grid-template-columns: 50% 1fr;
     gap: 0 5%;
     .content {
