@@ -9,17 +9,19 @@ import Select from '../common/Select';
 const RegionSelect = () => {
   const [region, setRegion] = useState('');
   const dispatch = useDispatch();
+  const options = ['All', 'Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
   useEffect(() => {
-    if (region === '') dispatch(getAllCountries());
+    if (region === 'All' || !region) dispatch(getAllCountries());
     else dispatch(getCountriesByRegion(region));
   }, [region]);
-  const handleChange = (e) => {
-    setRegion(e.target.value);
+  const handleChange = (value) => {
+    setRegion(value);
   };
   return (
     <Select
+      className="region-select"
       placeholder="Filter by Region"
-      options={['Africa', 'Americas', 'Asia', 'Europe', 'Oceania']}
+      options={options}
       onChange={handleChange}
     />
   );

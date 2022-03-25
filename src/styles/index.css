@@ -25,8 +25,9 @@ html {
   --secondary-bg-color: #ffffff;
   --main-text-color: #131416;
   --main-shadow-color: #868686;
-  --dark-mode-icon: url("../assets/icons/dark_mode_black_24dp.svg");
-  --left-arrow-icon: url("../assets/icons/west_black_24dp.svg");
+  --dark-mode-icon: url("/src/assets/icons/dark_mode_black_24dp.svg");
+  --left-arrow-icon: url("/src/assets/icons/west_black_24dp.svg");
+  --down-arrow-icon: url("/src/assets/icons/keyboard_arrow_down_black_24dp.svg");
 }
 
 body[data-theme='dark'] {
@@ -34,8 +35,9 @@ body[data-theme='dark'] {
   --secondary-bg-color: #2b3743;
   --main-text-color: #ffffff;
   --main-shadow-color: #000000;
-  --dark-mode-icon: url("../assets/icons/dark_mode_white_24dp.svg");
-  --left-arrow-icon: url("../assets/icons/west_white_24dp.svg");
+  --dark-mode-icon: url("/src/assets/icons/dark_mode_white_24dp.svg");
+  --left-arrow-icon: url("/src/assets/icons/west_white_24dp.svg");
+  --down-arrow-icon: url("/src/assets/icons/keyboard_arrow_down_white_24dp.svg");
 }
 
 body {
@@ -113,8 +115,9 @@ html {
   --secondary-bg-color: #ffffff;
   --main-text-color: #131416;
   --main-shadow-color: #868686;
-  --dark-mode-icon: url("../assets/icons/dark_mode_black_24dp.svg");
-  --left-arrow-icon: url("../assets/icons/west_black_24dp.svg");
+  --dark-mode-icon: url("/src/assets/icons/dark_mode_black_24dp.svg");
+  --left-arrow-icon: url("/src/assets/icons/west_black_24dp.svg");
+  --down-arrow-icon: url("/src/assets/icons/keyboard_arrow_down_black_24dp.svg");
 }
 
 body[data-theme='dark'] {
@@ -122,8 +125,9 @@ body[data-theme='dark'] {
   --secondary-bg-color: #2b3743;
   --main-text-color: #ffffff;
   --main-shadow-color: #000000;
-  --dark-mode-icon: url("../assets/icons/dark_mode_white_24dp.svg");
-  --left-arrow-icon: url("../assets/icons/west_white_24dp.svg");
+  --dark-mode-icon: url("/src/assets/icons/dark_mode_white_24dp.svg");
+  --left-arrow-icon: url("/src/assets/icons/west_white_24dp.svg");
+  --down-arrow-icon: url("/src/assets/icons/keyboard_arrow_down_white_24dp.svg");
 }
 
 body {
@@ -211,8 +215,9 @@ html {
   --secondary-bg-color: #ffffff;
   --main-text-color: #131416;
   --main-shadow-color: #868686;
-  --dark-mode-icon: url("../assets/icons/dark_mode_black_24dp.svg");
-  --left-arrow-icon: url("../assets/icons/west_black_24dp.svg");
+  --dark-mode-icon: url("/src/assets/icons/dark_mode_black_24dp.svg");
+  --left-arrow-icon: url("/src/assets/icons/west_black_24dp.svg");
+  --down-arrow-icon: url("/src/assets/icons/keyboard_arrow_down_black_24dp.svg");
 }
 
 body[data-theme='dark'] {
@@ -220,8 +225,9 @@ body[data-theme='dark'] {
   --secondary-bg-color: #2b3743;
   --main-text-color: #ffffff;
   --main-shadow-color: #000000;
-  --dark-mode-icon: url("../assets/icons/dark_mode_white_24dp.svg");
-  --left-arrow-icon: url("../assets/icons/west_white_24dp.svg");
+  --dark-mode-icon: url("/src/assets/icons/dark_mode_white_24dp.svg");
+  --left-arrow-icon: url("/src/assets/icons/west_white_24dp.svg");
+  --down-arrow-icon: url("/src/assets/icons/keyboard_arrow_down_white_24dp.svg");
 }
 
 body {
@@ -390,8 +396,9 @@ html {
   --secondary-bg-color: #ffffff;
   --main-text-color: #131416;
   --main-shadow-color: #868686;
-  --dark-mode-icon: url("../assets/icons/dark_mode_black_24dp.svg");
-  --left-arrow-icon: url("../assets/icons/west_black_24dp.svg");
+  --dark-mode-icon: url("/src/assets/icons/dark_mode_black_24dp.svg");
+  --left-arrow-icon: url("/src/assets/icons/west_black_24dp.svg");
+  --down-arrow-icon: url("/src/assets/icons/keyboard_arrow_down_black_24dp.svg");
 }
 
 body[data-theme='dark'] {
@@ -399,8 +406,9 @@ body[data-theme='dark'] {
   --secondary-bg-color: #2b3743;
   --main-text-color: #ffffff;
   --main-shadow-color: #000000;
-  --dark-mode-icon: url("../assets/icons/dark_mode_white_24dp.svg");
-  --left-arrow-icon: url("../assets/icons/west_white_24dp.svg");
+  --dark-mode-icon: url("/src/assets/icons/dark_mode_white_24dp.svg");
+  --left-arrow-icon: url("/src/assets/icons/west_white_24dp.svg");
+  --down-arrow-icon: url("/src/assets/icons/keyboard_arrow_down_white_24dp.svg");
 }
 
 body {
@@ -443,8 +451,9 @@ html {
   --secondary-bg-color: #ffffff;
   --main-text-color: #131416;
   --main-shadow-color: #868686;
-  --dark-mode-icon: url("../assets/icons/dark_mode_black_24dp.svg");
-  --left-arrow-icon: url("../assets/icons/west_black_24dp.svg");
+  --dark-mode-icon: url("/src/assets/icons/dark_mode_black_24dp.svg");
+  --left-arrow-icon: url("/src/assets/icons/west_black_24dp.svg");
+  --down-arrow-icon: url("/src/assets/icons/keyboard_arrow_down_black_24dp.svg");
 }
 
 body[data-theme='dark'] {
@@ -452,8 +461,9 @@ body[data-theme='dark'] {
   --secondary-bg-color: #2b3743;
   --main-text-color: #ffffff;
   --main-shadow-color: #000000;
-  --dark-mode-icon: url("../assets/icons/dark_mode_white_24dp.svg");
-  --left-arrow-icon: url("../assets/icons/west_white_24dp.svg");
+  --dark-mode-icon: url("/src/assets/icons/dark_mode_white_24dp.svg");
+  --left-arrow-icon: url("/src/assets/icons/west_white_24dp.svg");
+  --down-arrow-icon: url("/src/assets/icons/keyboard_arrow_down_white_24dp.svg");
 }
 
 body {
@@ -461,9 +471,50 @@ body {
   color: var(--main-text-color);
 }
 
-.select {
-  width: 150px;
+.select-container {
+  width: 180px;
+  font-size: 1.2rem;
+  color: var(--main-text-color);
+}
+
+.select-container .select {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 20px;
   height: 50px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   border-radius: 5px;
+  background-color: var(--secondary-bg-color);
+}
+
+.select-container .select .down-arrow-icon {
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  background-image: var(--down-arrow-icon);
+  background-size: contain;
+}
+
+.select-container .options-container {
+  margin-top: 3px;
+  padding: 10px 0;
+  border-radius: 5px;
+  list-style: none;
+  background-color: var(--secondary-bg-color);
+}
+
+.select-container .options-container.hidden {
+  display: none;
+}
+
+.select-container .options-container .option {
+  display: block;
+  padding: 5px 20px;
 }
 /*# sourceMappingURL=index.css.map */

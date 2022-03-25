@@ -1,7 +1,37 @@
 @import './global';
 
-.select {
-  width: 150px;
-  height: 50px;
-  border-radius: 5px;
+.select-container {
+  width: 180px;
+  font-size: 1.2rem;
+  color: var(--main-text-color);
+  .select {
+    display: flex;
+    padding: 0 20px;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 5px;
+    background-color: var(--secondary-bg-color);
+    .down-arrow-icon {
+      display: inline-block;
+      width: 15px;
+      height: 15px;
+      background-image: var(--down-arrow-icon);
+      background-size: contain;
+    }
+  }
+  .options-container {
+    margin-top: 3px;
+    padding: 10px 0;
+    border-radius: 5px;
+    list-style: none;
+    background-color: var(--secondary-bg-color);
+    &.hidden {
+      display: none;
+    }
+    .option {
+      display: block;
+      padding: 5px 20px;
+    }
+  }
 }
