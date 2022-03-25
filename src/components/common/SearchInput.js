@@ -1,8 +1,15 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 const SearchInput = (props) => {
-  const { placeholder, value, onChange, className } = props;
+  const { placeholder, onChange, className } = props;
+  const [value, setValue] = useState('');
+  const handleChange = (e) => {
+    setValue(e.target.value);
+  };
+  useEffect(() => {
+    onChange(value);
+  }, [value]);
   return (
     <div className="search">
       <input
@@ -10,7 +17,7 @@ const SearchInput = (props) => {
         type="text"
         placeholder={placeholder}
         value={value}
-        onChange={onChange}
+        onChange={handleChange}
       />
       <span className="search-icon" />
     </div>
@@ -19,14 +26,12 @@ const SearchInput = (props) => {
 
 SearchInput.propTypes = {
   placeholder: PropTypes.string,
-  value: PropTypes.string,
   onChange: PropTypes.func,
   className: PropTypes.string
 };
 
 SearchInput.defaultProps = {
   placeholder: '',
-  value: '',
   onChange: () => null,
   className: ''
 };

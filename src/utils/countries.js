@@ -67,3 +67,8 @@ export const showBorderCountries = (allCountries, borders = []) => {
     </MainButton>
   ));
 };
+
+export const filterByName = (name, countries = []) =>
+  countries.filter((country) =>
+    country.name.toLowerCase().includes(name.toLowerCase())
+  );
