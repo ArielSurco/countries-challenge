@@ -18,6 +18,11 @@ export const setCountries = (payload) => ({
   payload
 });
 
+export const setFilteredCountries = (payload) => ({
+  type: actionTypes.SET_FILTERED_COUNTRIES,
+  payload
+});
+
 export const setCountry = (payload) => ({
   type: actionTypes.SET_COUNTRY,
   payload
@@ -26,7 +31,10 @@ export const setCountry = (payload) => ({
 export const getAllCountries = () => async (dispatch) => {
   dispatch(setLoading());
   return getAll()
-    .then((countries) => dispatch(setCountries(countries)))
+    .then((countries) => {
+      dispatch(setFilteredCountries(countries));
+      return dispatch(setCountries(countries));
+    })
     .catch(() => dispatch(setError()));
 };
 

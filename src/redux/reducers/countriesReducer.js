@@ -3,6 +3,7 @@ import * as actionTypes from '../actions/types';
 
 const initialState = {
   countries: [],
+  filteredCountries: [],
   country: {},
   status: ''
 };
@@ -11,6 +12,8 @@ const countries = (state = initialState, { type, payload }) => {
   switch (type) {
     case actionTypes.SET_COUNTRIES:
       return { ...state, countries: payload, status: 'success' };
+    case actionTypes.SET_FILTERED_COUNTRIES:
+      return { ...state, filteredCountries: payload };
     case actionTypes.SET_COUNTRY:
       return { ...state, country: payload, status: 'success' };
     case actionTypes.SET_LOADING:
