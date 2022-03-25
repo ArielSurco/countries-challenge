@@ -12,6 +12,9 @@ const SearchInput = (props) => {
   }, [value]);
   return (
     <div className="search">
+      <div className="search-icon-container">
+        <span className="search-icon" />
+      </div>
       <input
         className={`search-input ${className}`}
         type="text"
@@ -19,7 +22,6 @@ const SearchInput = (props) => {
         value={value}
         onChange={handleChange}
       />
-      <span className="search-icon" />
     </div>
   );
 };

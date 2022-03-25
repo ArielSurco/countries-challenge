@@ -20,6 +20,9 @@ const Home = () => {
   useEffect(() => {
     dispatch(getAllCountries());
   }, []);
+  useEffect(() => {
+    dispatch(setFilteredCountries(countries));
+  }, [countries]);
   return (
     <>
       <SearchInput

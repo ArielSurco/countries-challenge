@@ -1,5 +1,47 @@
 @import './global';
 
+@mixin resetTextInput {
+  padding: 0;
+  border: none;
+  outline: none;
+}
+
+.search {
+  display: flex;
+  width: 90%;
+  max-width: 400px;
+  height: 50px;
+  margin: 0 auto;
+  box-shadow: $secondary-box-shadow;
+  background-color: var(--secondary-bg-color);
+  .search-icon-container {
+    display: inline-flex;
+    width: 80px;
+    height: 50px;
+    justify-content: center;
+    align-items: center;
+    background-color: inherit;
+    .search-icon {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-image: var(--search-icon);
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  .search-input {
+    @include resetTextInput();
+    width: calc(100% - 50px);
+    height: 100%;
+    color: var(--main-text-color);
+    background-color: inherit;
+    &::placeholder {
+      color: inherit;
+    }
+  }
+}
+
 .select-container {
   width: 180px;
   font-size: 1.2rem;
@@ -33,5 +75,11 @@
       display: block;
       padding: 5px 20px;
     }
+  }
+}
+
+@media (min-width: 768px) {
+  .search {
+    margin: 0;
   }
 }
